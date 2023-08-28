@@ -1,0 +1,30 @@
+<%- include ("partials/header.ejs") %>
+<%- include ("partials/navbar.ejs")%>
+<body>
+    <div class="container">
+        <form method="post" action="/resposta/create" >
+        <% pergunta.forEach((one)=>{ %>
+            <br>
+        <div class="card">
+            <div class="card-header">
+                <h4><%= one.pergunta %></h4>
+            </div>
+            <div class="card-body">
+                
+                <input type="checkbox" id="opc1" name="opc1" value="<%= one.opc1 %>" ><label for="opc1"><%= one.opc1 %></label><br>
+                <input type="checkbox" id="opc2" name="opc2" value="<%= one.opc2 %>" ><label for="opc2"><%= one.opc2 %></label><br>
+                <input type="checkbox" id="opc3" name="opc3" value="<%= one.opc3 %>" ><label for="opc3"><%= one.opc3 %></label><br>
+                <input type="checkbox" id="opc4" name="opc4" value="<%= one.opc4 %>" ><label for="opc4"><%= one.opc4 %></label><br>
+                <input type="checkbox" id="opc5" name="opc5" value="<%= one.opc5 %>" ><label for="opc5"><%= one.opc5 %></label><br>
+                
+                
+            </div>
+
+        </div>
+        <% }) %>
+    </form>
+    </div>
+    <br>
+    
+</body>
+<%- include ("partials/footer.ejs") %>
